@@ -11,7 +11,7 @@ exports.up = function (knex) {
       return knex.schema
         .createTable('cart', table => {
           table.increments('cart_id').primary().notNullable(); // adds an auto incrementing PK column
-          table.integer('fruit_id').references('fruit_id').inTable('fruits');
+          table.integer('fruit_id').references('fruit_id').inTable('fruits').unique();
           table.integer('quantity');
         });
     })
