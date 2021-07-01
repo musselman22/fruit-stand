@@ -17,7 +17,11 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     textDecoration: 'none',
-    color: 'white'
+    color: 'white',
+    fontWeight: "bold",
+  },
+  appBar: {
+    background: '#C3D973',
   }
 }));
 
@@ -26,7 +30,7 @@ function Navbar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" className={classes.appBar}>
         <Toolbar>
           <Link to="/" className={classes.link}>
             <Button color="inherit" >Home</Button>
